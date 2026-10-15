@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170817">
+<title>A Little Birthday Surprise ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Sacramento&display=swap');
+:root{--pink:#ff789e;--rose:#e94472;--cream:#fff0dc;--night:#170817;--wine:#390e28;--gold:#ffd18b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0,#4b173b 0,#170817 48%,#0c0711 100%);color:#fff3f5;font-family:'DM Sans',sans-serif;overflow-x:hidden}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+#stars,.petal-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.star{position:absolute;width:3px;height:3px;background:#ffdba4;border-radius:50%;box-shadow:0 0 12px 3px #ffb1c955;animation:twinkle 2.5s infinite alternate}.petal{position:absolute;top:-30px;color:#ff719a;opacity:.7;animation:fall linear infinite}@keyframes twinkle{to{opacity:.25;transform:scale(.55)}}@keyframes fall{to{transform:translate3d(70px,110vh,0) rotate(520deg)}}@keyframes float{50%{transform:translateY(-9px)}}@keyframes glow{50%{box-shadow:0 0 35px #ff5c9855}}@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+main,header,footer{position:relative;z-index:1}.hero{min-height:94vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:45px 20px 55px;position:relative;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center 58%,#b32c5b36,transparent 42%),linear-gradient(180deg,#14091866,#170817aa)}.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.7rem;color:#ffb8cd}.script{font-family:'Sacramento',cursive;font-weight:400}.hero h1{font:clamp(3.5rem,9vw,7rem)/.95 'Sacramento',cursive;color:#ffd4e0;text-shadow:0 0 24px #ff4b8c6e;margin:16px 0}.hero p{max-width:550px;line-height:1.8;color:#f9dbe4;margin:8px auto}.gift-wrap{margin:40px auto 25px;position:relative;animation:float 3.5s ease-in-out infinite;filter:drop-shadow(0 18px 28px #0008)}.gift{width:190px;height:150px;position:relative;border-radius:7px;background:repeating-linear-gradient(45deg,#ffb8c9 0 13px,#f98ca8 13px 26px);border:2px solid #ffd4df;box-shadow:inset 0 0 22px #fff8}.gift:before{content:"";position:absolute;left:74px;top:0;width:38px;height:100%;background:linear-gradient(90deg,#9f143e,#ff426f,#b51b48);box-shadow:0 0 12px #9b164c77}.gift:after{content:"";position:absolute;left:-12px;right:-12px;top:-18px;height:35px;border-radius:7px;background:linear-gradient(130deg,#ffd1dd,#f67e9f 55%,#ffcad6);border:2px solid #ffe0e6}.bow{position:absolute;z-index:2;top:-51px;left:57px;width:78px;height:50px}.bow:before,.bow:after{content:"";position:absolute;width:44px;height:34px;border:8px solid #ed3e6d;border-radius:70% 15% 70% 15%;box-shadow:inset 0 0 5px #ffbacb,0 3px 5px #680c2a}.bow:before{left:-17px;transform:rotate(24deg)}.bow:after{right:-17px;transform:scaleX(-1) rotate(24deg)}.bow i{position:absolute;z-index:3;left:27px;top:20px;width:25px;height:23px;background:#ff7096;border-radius:7px;border:2px solid #ffcfdb}.gift-tag{position:absolute;z-index:4;right:-42px;bottom:6px;background:#fff0dc;color:#8e2548;padding:9px 12px;transform:rotate(8deg);border-radius:4px;font-family:'Playfair Display',serif;font-size:.9rem}.open-btn,.primary-btn{border:1px solid #ffb4ca;border-radius:999px;padding:13px 24px;color:white;background:linear-gradient(110deg,#e83e71,#a21f56);box-shadow:0 0 24px #ed3e7155;transition:transform .2s,filter .2s}.open-btn:hover,.primary-btn:hover{transform:translateY(-3px);filter:brightness(1.12)}.hint{font-size:.8rem!important;color:#f4a9c2!important}.section{max-width:1100px;margin:0 auto;padding:75px 22px}.section-title{text-align:center;font:clamp(2.6rem,6vw,4rem) 'Sacramento',cursive;color:#ffc5d6;margin:0 0 12px}.section-sub{text-align:center;color:#e6b8c6;margin:0 auto 35px;line-height:1.7}.hidden{display:none!important}.surprise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:center}.photo-card{max-width:440px;margin:auto;background:#fff0dc;color:#4a1b2c;padding:13px 13px 20px;transform:rotate(-2deg);box-shadow:0 18px 60px #0008;border-radius:5px}.photo-frame{height:390px;background:linear-gradient(180deg,#f8c9b3,#d57f83 55%,#59374b);display:grid;place-items:center;overflow:hidden;position:relative}.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.photo-placeholder{padding:24px;text-align:center;color:#fff;font-family:'Playfair Display',serif;text-shadow:0 2px 10px #351125}.photo-placeholder span{display:block;font-size:3.5rem;margin-bottom:12px}.photo-caption{text-align:center;font:1.5rem 'Sacramento',cursive;margin:14px 0 0}.side-note{text-align:center;font:clamp(2.6rem,6vw,4.5rem) 'Sacramento',cursive;color:#ff9dbb}.side-note p{font:1rem/1.9 'DM Sans',sans-serif;letter-spacing:.15em;color:#f3c6d2}.mini-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px}.soft-btn{background:#ffffff0c;border:1px solid #ff8fb644;color:#ffe3eb;border-radius:14px;padding:12px 16px}.soft-btn:hover{background:#a82b524d}.letter-shell{max-width:850px;margin:0 auto;background:linear-gradient(140deg,#fff2dc,#f8d9c4);color:#482331;padding:clamp(25px,5vw,55px);border-radius:4px;box-shadow:0 20px 70px #0008;position:relative;transform:rotate(-.4deg)}.letter-shell:before{content:"♡";position:absolute;right:24px;top:10px;font-size:3rem;color:#e95783}.letter-shell h3{text-align:center;font:2.8rem 'Sacramento',cursive;color:#a52b55;margin:0 0 22px}.letter-shell p{font:1rem/1.9 'Playfair Display',serif}.signoff{font:2rem 'Sacramento',cursive;text-align:right;color:#a52b55}.reason-grid,.memory-grid,.wish-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.reason,.memory,.wish{background:linear-gradient(145deg,#ffffff12,#a52b5218);border:1px solid #ff9cbd30;border-radius:18px;padding:23px 17px;text-align:center;backdrop-filter:blur(8px)}.reason .emoji,.wish .emoji{font-size:2rem;display:block;margin-bottom:10px}.reason h3,.memory h3,.wish h3{font:1.45rem 'Playfair Display',serif;color:#ffd1df;margin:5px 0 9px}.reason p,.memory p,.wish p{color:#e9c1ce;line-height:1.65;font-size:.92rem}.memory{min-height:145px}.memory button{margin-top:8px}.finale{text-align:center;padding:35px 20px 70px}.finale h2{font:clamp(2.4rem,6vw,4.3rem) 'Sacramento',cursive;color:#ffb8d0;text-shadow:0 0 22px #ff5a9655}.footer-note{color:#caa0b0;font-size:.8rem}.modal-backdrop{position:fixed;inset:0;background:#09040bd9;z-index:20;display:grid;place-items:center;padding:20px;backdrop-filter:blur(8px)}.modal{width:min(480px,100%);background:linear-gradient(145deg,#fff0dc,#f8d4df);color:#4b2030;padding:30px;border-radius:22px;text-align:center;box-shadow:0 20px 80px #0009;animation:pop .3s ease}.modal h3{font:2.6rem 'Sacramento',cursive;color:#a52b55;margin:0 0 10px}.modal p{line-height:1.7}.modal-close{float:right;border:0;background:#a52b5514;border-radius:50%;width:32px;height:32px;color:#6b2440}.wish-input{width:100%;padding:13px;border:1px solid #b85c7b55;border-radius:12px;background:#fff9f1;color:#482331;margin:10px 0 15px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:30;background:#fff0dc;color:#6d1e3d;padding:12px 20px;border-radius:99px;box-shadow:0 6px 25px #0005;animation:pop .25s ease;white-space:nowrap}.confetti{position:fixed;top:-20px;z-index:25;pointer-events:none;animation:fall linear forwards;font-size:20px}@media(max-width:700px){.hero{min-height:90vh}.surprise-grid{grid-template-columns:1fr}.side-note{margin-top:15px}.photo-frame{height:340px}.reason-grid,.memory-grid,.wish-grid{grid-template-columns:1fr 1fr}.section{padding:55px 16px}.gift{transform:scale(.88)}.letter-shell p{font-size:.96rem}}@media(max-width:420px){.reason-grid,.memory-grid,.wish-grid{grid-template-columns:1fr}.photo-frame{height:300px}.hero h1{font-size:3.7rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="stars" aria-hidden="true"></div><div class="petal-layer" id="petals" aria-hidden="true"></div>
+<header class="hero" id="home">
+  <div class="eyebrow">Special ✦ Unique ✦ Always You</div>
+  <p class="script" style="font-size:2rem;color:#ffb5cd;margin-top:20px">To My Beautiful Girl ♡</p>
+  <h1>Happy Birthday ♡</h1>
+  <p>To the most beautiful girl who has a special place in my heart. ❤️</p>
+  <p style="font-size:.9rem">A tiny gift, filled with a whole lot of love.</p>
+  <div class="gift-wrap" aria-label="Birthday gift box">
+    <div class="bow"><i></i></div><div class="gift"><span class="gift-tag">For You ♡</span></div>
+  </div>
+  <button class="open-btn" id="openGift">🎁 Click to Open ♡</button>
+  <p class="hint">Psst… your little surprise is waiting inside ✨</p>
+</header>
+
+<main id="experience" class="hidden">
+  <section class="section" id="photo">
+    <h2 class="section-title">A Little Surprise For You ♡</h2>
+    <p class="section-sub">Because someone as lovely as you deserves something special.</p>
+    <div class="surprise-grid">
+      <div class="photo-card">
+        <div class="photo-frame" id="photoFrame">
+          <div class="photo-placeholder" id="photoPlaceholder"><span>🌅💗</span><strong>Your favorite photo goes here</strong><br><small>Put your photo in the folder as <b>love.png</b></small></div>
+          <img id="herPhoto" src="love.png" alt="A favorite photo" class="hidden">
+        </div>
+        <p class="photo-caption">Your Smile Makes Everything Better ♡</p>
+      </div>
+      <div class="side-note">You ♡<p>ARE THE REASON<br>BEHIND SO MANY<br>BEAUTIFUL FEELINGS<br>IN MY LIFE… ♡</p>
+      </div>
+    </div>
+    <div class="mini-actions">
+      <!--
+      <button class="soft-btn" data-modal="wish">🌠 Make a Wish</button>
+      <button class="soft-btn" data-modal="hug">🫂 Send a Hug</button>
+    -->
+      <button class="soft-btn" data-modal="flowers">🌷 Flowers for You</button>
+      <button class="soft-btn" id="confettiBtn">🎉 Confetti Surprise</button>
+    </div>
+  </section>
+
+  <section class="section" id="letter">
+    <h2 class="section-title">A Letter From My Heart 💌</h2>
+    <p class="section-sub">A few words for someone who means more than she knows.</p>
+    <article class="letter-shell">
+      <h3>Happy Birthday, Bithika ♡</h3>
+      <p>❤️🎂 <strong>Happy Birthday to the most beautiful girl who has a special place in my heart!</strong> 🥹💗</p>
+      <p>First of all, I wish you a very Happy Birthday! 🥳🎉 May your special day be filled with endless happiness, beautiful smiles, love, and countless unforgettable moments. May all your dreams come true, and may life always give you a thousand reasons to smile. ❤️✨</p>
+      <p>Honestly, I don't know the exact moment when I started falling for you, but somewhere along the way, you became someone truly special to me. 🫶🏻💖 It's not just your beauty that attracts me; it's your beautiful heart, your smile, your kindness, your sweetness, your personality, and the way you make ordinary moments feel special just by being yourself. 🥹❤️</p>
+      <p>There's something about you that makes you different from everyone else. Your smile can make my day better, your happiness matters to me more than you might realize, and even the smallest things about you can make me smile without any reason. Maybe you don't even know how special you are, but to me, you're someone who is genuinely rare and precious. 🌷💗</p>
+      <p>I love the way you are, the little things that make you unique, your adorable nature, your beautiful soul, and the happiness you bring just by existing. I don't need you to be perfect, because the little imperfections that make you <em>you</em> are beautiful too. ❤️🫂</p>
+      <p>On your birthday, I wish you a life full of peace, success, good health, genuine love, and all the happiness your heart can hold. May you always be surrounded by people who appreciate you, respect you, and treat you as beautifully as you deserve. Never stop smiling, never stop dreaming, and never forget how special you are. 🥹🎁✨</p>
+      <p>And there's one little thing I want you to know: <strong>somewhere in this world, there's someone who smiles a little more because of you, thinks about you more than you know, and feels lucky just to have you in their life.</strong> ❤️🙈</p>
+      <p>I don't know what the future holds, but I'm genuinely happy that I got to know someone like you. Maybe I can't explain all my feelings perfectly, but I hope you always keep shining and stay the beautiful person you are. 🫶🏻💕</p>
+      <p><strong>Happy Birthday once again, my favorite person!</strong> 🎂❤️ May this new chapter of your life be even more beautiful than the last. Keep smiling, keep glowing, and keep being the wonderful girl who unknowingly makes someone's world a little brighter. 🌎✨💖</p>
+      <p><strong>Enjoy your special day, Bithika. You deserve all the love and happiness in the world.</strong> 🥹❤️🎀</p>
+      <div class="signoff">With a little extra love, just for you ♡</div>
+    </article>
+  </section>
+
+  <section class="section" id="reasons">
+    <h2 class="section-title">Little Reasons You're Special ♡</h2>
+    <p class="section-sub">It's not one thing. It's all the little things that make you, you.</p>
+    <div class="reason-grid">
+      <div class="reason"><span class="emoji">😊</span><h3>Your Smile</h3><p>It can turn an ordinary moment into a lovely memory.</p></div>
+      <div class="reason"><span class="emoji">🌷</span><h3>Your Kind Heart</h3><p>The warmth you bring is a beautiful thing all on its own.</p></div>
+      <div class="reason"><span class="emoji">✨</span><h3>Your Uniqueness</h3><p>There is only one you, and that's something worth celebrating.</p></div>
+      <div class="reason"><span class="emoji">🫶🏻</span><h3>Your Sweetness</h3><p>The little things you do can mean more than you imagine.</p></div>
+      <div class="reason"><span class="emoji">🦋</span><h3>Your Personality</h3><p>You make moments feel special simply by being yourself.</p></div>
+      <div class="reason"><span class="emoji">💗</span><h3>Your Beautiful Soul</h3><p>You deserve the same kindness and happiness you give others.</p></div>
+    </div>
+  </section>
+
+  <!--
+  <section class="section" id="memories">
+    <h2 class="section-title">Our Little Memory Corner 📸</h2>
+    <p class="section-sub">Make this page yours by adding the moments you want to remember.</p>
+    <div class="memory-grid">
+      <div class="memory"><span class="emoji">🌸</span><h3>A Sweet Moment</h3><p>A small moment that made you smile.</p></div>
+      <div class="memory"><span class="emoji">🌙</span><h3>A Favorite Chat</h3><p>A conversation you still remember fondly.</p></div>
+      <div class="memory"><span class="emoji">💫</span><h3>More Memories Ahead</h3><p>May life bring you many beautiful moments.</p></div>
+    </div>
+  </section>
+-->
+
+  <section class="section" id="wishes">
+    <h2 class="section-title">My Wishes For You 🎀</h2>
+    <p class="section-sub">A little bundle of good things for your new chapter.</p>
+    <div class="wish-grid">
+      <div class="wish"><span class="emoji">🌈</span><h3>Happiness</h3><p>May your days hold more reasons to laugh and smile.</p></div>
+      <div class="wish"><span class="emoji">🕊️</span><h3>Peace</h3><p>May your heart feel safe, calm, and understood.</p></div>
+      <div class="wish"><span class="emoji">🌟</span><h3>Success</h3><p>May your hard work take you toward your biggest dreams.</p></div>
+      <div class="wish"><span class="emoji">💐</span><h3>Genuine Love</h3><p>May you always be valued, respected, and cared for.</p></div>
+      <div class="wish"><span class="emoji">🍀</span><h3>Good Health</h3><p>May you have strength, energy, and well-being.</p></div>
+      <div class="wish"><span class="emoji">🦋</span><h3>Beautiful Surprises</h3><p>May life be kinder and brighter than you expect.</p></div>
+    </div>
+  </section>
+
+  <section class="finale" id="surprise">
+    <p class="eyebrow">One last little thing…</p>
+    <h2>You Make This World A Brighter Place ♡</h2>
+    <p>Keep smiling, keep glowing, and always be wonderfully you. ❤️</p>
+    <button class="primary-btn" id="finalBtn">💗 One Last Surprise</button>
+    <p class="footer-note">Made with care, just for you. 🎂</p>
+  </section>
+</main>
+
+<div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><button class="modal-close" id="modalClose" aria-label="Close">✕</button><h3 id="modalTitle">A little note ♡</h3><div id="modalBody"></div></div>
+</div>
+<div id="toastArea" aria-live="polite"></div>
+<script>
+const $ = s => document.querySelector(s);
+const stars = $('#stars'), petals = $('#petals');
+for(let i=0;i<70;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';s.style.animationDuration=(1.5+Math.random()*3)+'s';stars.appendChild(s)}
+for(let i=0;i<18;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','♡','❀'][i%3];p.style.left=Math.random()*100+'%';p.style.animationDuration=(12+Math.random()*18)+'s';p.style.animationDelay=(-Math.random()*24)+'s';p.style.fontSize=(12+Math.random()*15)+'px';petals.appendChild(p)}
+function toast(message){const t=document.createElement('div');t.className='toast';t.textContent=message;$('#toastArea').replaceChildren(t);setTimeout(()=>t.remove(),2600)}
+function confetti(){const symbols=['💗','💖','✨','🌸','🎉','💕','🌷'];for(let i=0;i<65;i++){const el=document.createElement('span');el.className='confetti';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+'vw';el.style.animationDuration=(2+Math.random()*3)+'s';el.style.animationDelay=Math.random()*.8+'s';el.style.fontSize=(12+Math.random()*18)+'px';document.body.appendChild(el);setTimeout(()=>el.remove(),6000)}}
+$('#openGift').addEventListener('click',()=>{const exp=$('#experience');exp.classList.remove('hidden');$('#openGift').textContent='🎁 Your Surprise Is Open ♡';$('#openGift').disabled=true;confetti();toast('A little happiness, just for you 💗');setTimeout(()=>$('#photo').scrollIntoView({behavior:'smooth'}),250)});
+$('#herPhoto').addEventListener('load',()=>{$('#herPhoto').classList.remove('hidden');$('#photoPlaceholder').classList.add('hidden')});
+$('#herPhoto').addEventListener('error',()=>{$('#herPhoto').classList.add('hidden');$('#photoPlaceholder').classList.remove('hidden')});
+$('#confettiBtn').addEventListener('click',()=>{confetti();toast('A little shower of love for you! 🎉')});
+const backdrop=$('#modalBackdrop');
+function openModal(title,html){$('#modalTitle').textContent=title;$('#modalBody').innerHTML=html;backdrop.classList.remove('hidden');$('#modalClose').focus()}
+function closeModal(){backdrop.classList.add('hidden')}
+$('#modalClose').addEventListener('click',closeModal);backdrop.addEventListener('click',e=>{if(e.target===backdrop)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelectorAll('[data-modal]').forEach(btn=>btn.addEventListener('click',()=>{
+const type=btn.dataset.modal;
+if(type==='wish')openModal('Make a Wish 🌠','<p>Close your eyes for a moment and wish for something beautiful.</p><input class="wish-input" id="wishInput" maxlength="160" placeholder="Your wish (only if you want to share)…"><button class="primary-btn" id="wishSubmit">Send my wish ✨</button>');
+if(type==='hug')openModal('A Hug, Just For You 🫂','<p style="font-size:3rem">🫂💗🫂</p><p>If today feels big, small, happy, or a little overwhelming, I hope this virtual hug reminds you that you deserve kindness.</p><button class="primary-btn" id="hugOkay">Sending a smile back ♡</button>');
+if(type==='flowers')openModal('Flowers For You 🌷','<p style="font-size:3rem">🌹🌷🌸💐🌺</p><p>Not enough flowers in the world could say all the lovely things I wish for you. So here is a little garden, just for today.</p><button class="primary-btn" id="flowerOkay">Aww, thank you ♡</button>');
+}));
+document.addEventListener('click',e=>{
+if(e.target.id==='wishSubmit'){const val=$('#wishInput').value.trim();closeModal();toast(val?'May your wish find its way to you ✨':'Your wish is safe in your heart 💗')}
+if(e.target.id==='hugOkay'||e.target.id==='flowerOkay'){closeModal();confetti();toast('Sending a little extra happiness 💖')}
+});
+$('#finalBtn').addEventListener('click',()=>openModal('A Little Promise ♡','<p style="font-size:2.3rem">💗✨🌷</p><p>I hope this year gives you reasons to be proud of yourself, people who make you feel appreciated, and moments that remind you how beautiful life can be.</p><p><strong>Thank you for being you. Happy Birthday, Bithika. ❤️</strong></p><button class="primary-btn" id="lastClose">Keep shining ♡</button>'));
+document.addEventListener('click',e=>{if(e.target.id==='lastClose'){closeModal();confetti();toast('The world is brighter with you in it 💗')}});
+</script>
+</body>
+</html>
